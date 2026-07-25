@@ -4,15 +4,17 @@ import { z } from 'zod';
 export const VectorInputSchema = z.object({
   vectors: z.array(z.object({ x: z.number(), y: z.number(), timestamp: z.number() })),
   semanticContext: z.string().optional(),
-});
-
-export class CentrixVectorKeyboard {
-  processVectorInput(input: z.infer<typeof VectorInputSchema>) {
+ }
+);
+export class CentrixVectorKeyboard 
+{
+  processVectorInput(input: z.infer<typeof VectorInputSchema>) 
+   {
     // Lógica propietaria de reconocimiento de usuario y mapeo semántico/emojis
     return {
-      predictedText: "Estado atómico integrado",
-      suggestedEmoji: "🚀",
-      confidence: 0.99
+      "predictedText": "Estado atómico integrado",
+      "suggestedEmoji": "🚀",
+      "confidence": "0.99"
     };
   }
 }
